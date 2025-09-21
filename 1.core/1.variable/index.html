@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. biến là gì : biến là tên dùng để tham chiếu đến một vùng nhớ trong ram
+        // nơi lưu trữ giá trị giữ liệu để sử dụng và thay đổi trong khi chạy chương trình.
+        // => trả lời khi đi phỏng vấn : Biến trong JavaScript là một tên dùng để lưu trữ 
+        // và tham chiếu dữ liệu trong bộ nhớ, giúp chúng ta quản lý và sử dụng giá trị trong chương trình
+
+        //2. trong javascript có 3 cách khai báo biến 
+        // 2.1 sử dụng các từ khóa: var, let, const 
+        // 2.2 Var
+        // => cách khai báo cũ tước es6 có function scope dễ gây lỗi 
+        // 2.3 let 
+        // => khai báo trong block scope giá trị có thể thay đổi 
+        // 2.4 const 
+        // => có block scope, nhưng giá trị không thể thay đổi sau khi gán lần đầu (hằng số).
+
+        let age = 20;        // khai báo biến age có giá trị 20
+        const name = "Huy";  // khai báo hằng số name
+        var city = "Hà Nội"; // cách cũ, ít dùng hơn
+
+        console.log(age);  // 20
+        console.log(name); // "Huy"
+        console.log(city); // "Hà Nội"
+
+    </script>
+</body>
+
+</html>

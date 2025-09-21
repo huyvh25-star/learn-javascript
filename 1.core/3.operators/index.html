@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1. toán tử số học
+        let a = 10, b = 3;
+
+        console.log(a + b); // 13 (cộng)
+        console.log(a - b); // 7 (trừ)
+        console.log(a * b); // 30 (nhân)
+        console.log(a / b); // 3.333... (chia)
+        console.log(a % b); // 1 (chia lấy dư)
+        console.log(a ** b); // 1000 (lũy thừa: 10^3)
+
+        a++; // tăng 1
+        console.log(a); // 11
+
+        b--; // giảm 1
+        console.log(b); // 2
+
+        //2. toán tử gán 
+        let x = 5;
+        x += 3; // x = x + 3 = 8
+        x -= 2; // x = x - 2 = 3
+        x *= 2; // x = x * 2 = 10
+        x /= 3; // x = x / 3 = 5/3
+        x %= 3; // x = x % 3 =
+
+        // 3. toán tử so sánh 
+        // => So sánh giá trị, tự động ép kiểu == (so sánh lỏng lẻo)
+        console.log(5 == "5"); // true
+        // So sánh cả giá trị và kiểu dữ liệu. === (so sánh nghiêm ngặt)
+        console.log(5 === "5"); // false
+        console.log(5 === 5);   // true
+
+        // 4.  Toán tử logic (Logical Operators)
+        let i = true, y = false;
+
+        console.log(i && y); // false (AND: cả 2 phải đúng)
+        console.log(i || y); // true  (OR: chỉ cần 1 đúng)
+        console.log(!i);     // false (NOT: đảo ngược giá trị)
+
+        // 5. Spread và Rest Operators (...)
+        // Spread (trải ra)
+        let arr = [1, 2, 3];
+        let arr2 = [...arr, 4, 5]; // [1, 2, 3, 4, 5]
+
+        let obj = { name: "Huy", age: 20 };
+        let obj2 = { ...obj, city: "Hà Nội" };
+        console.log(obj2); // { name: "Huy", age: 20, city: "Hà Nội" }
+        // Rest (thu gọn lại)
+        // Dùng để gom các giá trị còn lại vào một biến.
+        function sum(...numbers) {
+            return numbers.reduce((a, b) => a + b, 0);
+        }
+        console.log(sum(1, 2, 3, 4)); // 10
+
+        let [first, ...rest] = [10, 20, 30, 40];
+        console.log(first); // 10
+        console.log(rest);  // [20, 30, 40]
+
+
+    </script>
+</body>
+
+</html>

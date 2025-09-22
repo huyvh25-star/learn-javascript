@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Làm việc với chuỗi</h1>
+    <script>
+        //1. sử dụng method slice
+        // input (start, end)  => output beetwent start và end 
+        // ví dụ 
+        let fullName = 'vũ hoàng huy';  // muốn lấy chữ hoàng thôi 
+
+        let newFullName = fullName.slice(2, 8)
+        console.log(newFullName); // hoàng
+
+        //2. sử dụng split(separator, limit)
+        // * Mục đích: biến chuỗi thành mảng (array) bằng cách tách theo separator
+        // * Cú pháp: str.split(separator, limit)
+        // separator có thể là chuỗi hoặc RegExp. Nếu separator === '' => tách thành mảng ký tự.
+        // limit (số) giới hạn số phần tử trả về.
+        // Nếu separator là undefined => trả về [str].
+        // ví dụ 1
+        let numbers = '12345'
+        console.log(numbers.split('')); // ['1','2','3','4','5']
+        // ví dụ 2 này nếu muốn chuyển thành mảng ta có như sau 
+        let nums = '1.2.3.4.5'
+        console.log(nums.split('.').map(Number)); // .map(number) để ép sang kiểu number
+
+
+        // bài tập 1
+        // Viết code lấy 3 ký tự đầu của chuỗi "JavaScript" theo 2 cách: bằng slice và bằng substring
+        let core = 'JavaScript';
+        // cách 1 ; 
+        console.log(core.substring(0, 3));
+
+        // bài tâp 2    
+        // Tách chuỗi "apple, banana , cherry" 
+        // thành mảng các tên quả không có dấu cách dư, rồi nối lại thành chuỗi cách nhau bằng ; .
+
+        let fruits = "apple, banana , cherry";
+        let array = fruits.split(', ').map(x => x.trim());
+        console.log(array.join('; ')); // chuyển lại thành chuỗi
+
+        //Bài 3 — replace (thay tất cả)
+
+        // Cho "foo foo foo", thay tất cả foo bằng bar.
+
+        let change = "foo foo foo";
+        console.log(change.replace(/foo/g, 'bar')); // c1
+        console.log(change.replaceAll("foo", 'bar')); // c2
+
+
+
+        // bài 4 ;  Kiểm tra xem chuỗi "Số điện thoại: +84-912-345-678" có chứa "+84" không? Viết code (boolean).
+        let phoneNumbers = '+84-912-345-678'
+
+        console.log(phoneNumbers.includes('+84')); // true
+        //         Bài 5 — limit split
+
+        // Tách "a b c d e" thành mảng chỉ gồm 3 phần (tức là ["a","b","c d e"]) — dùng split.
+
+        let strr = "a b c d e";
+        // lần 1 
+        let strr1 = strr.split(" ", 3)
+        console.log(strr1);
+        // lần 2 
+        // let strr2 = strr1.
+
+    </script>
+</body>
+
+</html>
